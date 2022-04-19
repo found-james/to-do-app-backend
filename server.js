@@ -4,7 +4,7 @@ const CORS = require("cors");
 const { errorHandler } = require("./middleware/errorMiddleware.js")
 const PORT = 8000;
 const todoRoutes = require("./routes/todoRoutes.js");
-const { connectDB } = require("./config/connection.js")
+const  connectDB  = require("./config/connection.js")
 
 connectDB();
 const app = express();
