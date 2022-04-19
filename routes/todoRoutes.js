@@ -6,15 +6,15 @@ const { getTodos, createTodo, deleteTodo, updateTodo,showTodo } = require("../co
 
 //const Todo = require("../models/TodoSchema.js");
 
-api.get("/todo", asyncHandler( getTodos ));
+api.get("/", asyncHandler( getTodos ));
 
-api.post("/todo", asyncHandler( createTodo ));
+api.post("/", asyncHandler( createTodo ));
 
-api.delete("todo/:id", asyncHandler( deleteTodo ));
+api.delete("/:id", asyncHandler( deleteTodo ));
 
-api.put("todo/:id", asyncHandler( updateTodo ));
+api.put("/:id", asyncHandler( updateTodo ));
 
-api.get("todo/:id", asyncHandler( showTodo ));
+api.get("/:id", asyncHandler( showTodo ));
 
 module.exports = api;
 
