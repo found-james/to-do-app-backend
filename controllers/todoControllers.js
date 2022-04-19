@@ -1,4 +1,4 @@
-const { globalAgent } = require("http");
+
 const Todo = require("../models/TodoSchema.js");
 
 const getTodos = async (req, res) => {
