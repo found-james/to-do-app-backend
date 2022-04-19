@@ -1,7 +1,8 @@
 const express = require("express");
 const api = express.Router();
-const { getTodos, createTodo, deleteTodo, updateTodo,showTodo } = require("../controllers/todoControllers.js")
+
 const { asyncHandler } = require("../middleware/errorMiddleware.js");
+const { getTodos, createTodo, deleteTodo, updateTodo,showTodo } = require("../controllers/todoControllers.js");
 
 //const Todo = require("../models/TodoSchema.js");
 
