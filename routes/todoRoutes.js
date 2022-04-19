@@ -1,23 +1,23 @@
 const express = require("express");
-const router = express.Router();
+const api = express.Router();
 const { getTodos, createTodo, deleteTodo, updateTodo,showTodo } = require("../controllers/todoControllers.js")
 const { asyncHandler } = require("../middleware/errorMiddleware.js");
 
 //const Todo = require("../models/TodoSchema.js");
 
-router.get("/", asyncHandler( getTodos ));
+api.get("/todo", asyncHandler( getTodos ));
 
-router.post("/", asyncHandler( createTodo ));
+api.post("/todo", asyncHandler( createTodo ));
 
-router.delete("/:id", asyncHandler( deleteTodo ));
+api.delete("todo/:id", asyncHandler( deleteTodo ));
 
-router.put("/:id", asyncHandler( updateTodo ));
+api.put("todo/:id", asyncHandler( updateTodo ));
 
-router.get("/:id", asyncHandler( showTodo ));
+api.get("todo/:id", asyncHandler( showTodo ));
 
-module.exports = router;
+module.exports = api;
 
 // get - read 
 // post - create
 // delete - destroy
-// put - update
+// put - update or create
