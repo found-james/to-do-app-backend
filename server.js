@@ -2,7 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const CORS = require("cors");
 const { errorHandler } = require("./middleware/errorMiddleware.js")
-const PORT = 8000;
+const PORT = 8080;
 const todoRoutes = require("./routes/todoRoutes.js");
 const  connectDB  = require("./config/connection.js")
 
