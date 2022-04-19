@@ -1,25 +1,21 @@
-const express = require("express");
-const router = express.Router();
-//const Todo = require("../models/TodoSchema.js");
+const getTodos = (req, res) => {
+        res.status(200).json({message: "get todos"})
+    }
 
-router.get("/", (req, res) => {
-    res.status(200).json({message: "get todos"})
-})
-
-router.post("/", (req, res) => {
+const createTodo = (req, res) => {
     res.status(200).json({message: "new todo "})
-})
-
-router.delete("/:id", (req, res) => {
+}
+    
+const deleteTodo = (req, res) => {
     res.status(200).json({message: "delete todo"})
-})
+}
 
-router.put("/:id", (req, res) => {    
+const updateTodo = (req, res) => {    
     res.status(200).json({message: "update todo"})
-});
-
-router.get("/:id", (req, res) => {    
+}
+const showTodo = (req, res) => {    
     res.status(200).json({message: "show todo"})
-})
+}
 
-module.exports = router;
+module.exports = { getTodos, createTodo, deleteTodo, updateTodo, showTodo }
+
