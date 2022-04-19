@@ -5,7 +5,7 @@ const { asyncHandler } = require("../middleware/errorMiddleware.js");
 
 //const Todo = require("../models/TodoSchema.js");
 
-router.get("/", getTodos );
+router.get("/", asyncHandler( getTodos ));
 
 router.post("/", asyncHandler( createTodo ));
 

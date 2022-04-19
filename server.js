@@ -16,9 +16,9 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use("/todo", todoRoutes)
 app.use(errorHandler);
-// app.use(function(err, req, res, next){
-//     res.status(500).send({message: "somethiing is off"});
-// })
+app.use(function(err, req, res, next){
+    res.status(500).send({message: "somethiing is off"});
+})
 
 app.listen(PORT);
 
