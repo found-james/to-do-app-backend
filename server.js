@@ -6,6 +6,7 @@ const CORS = require("cors");
 
 const { errorHandler, explainThisOne } = require("./middleware/errorMiddleware.js")
 const todoRoutes = require("./routes/todoRoutes.js");
+const homeRoute = require("./routes/homeRoute.js");
 
 const PORT = process.env.PORT || 3000;
 const app = express();
@@ -15,7 +16,8 @@ app.use(CORS());
 app.use(express.json()); 
 app.use(express.urlencoded({ extended: false }));
 
-app.use("/", todoRoutes);
+app.use("/todo", todoRoutes);
+app.use("/", homeRoute);
 app.use(errorHandler);
 app.use(explainThisOne);
 

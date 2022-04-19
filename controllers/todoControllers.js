@@ -16,8 +16,6 @@ const createTodo = async (req, res) => {
     const todo = await Todo.create({ title: req.body.title, completed: req.body.completed})
     res.status(200).json(todo)
 
-    res.send(<h1>hi</h1>);
-
 }
     
 const deleteTodo = async (req, res) => {
@@ -56,6 +54,7 @@ const showTodo = async (req, res) => {
 
     res.status(200).json(todo);
 }
+
 
 module.exports = { getTodos, createTodo, deleteTodo, updateTodo, showTodo }
 
