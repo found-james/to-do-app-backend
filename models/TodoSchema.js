@@ -1,6 +1,6 @@
-const { Schema, model } = require("../connection.js");
+const mongoose = require("mongoose");
 
-const todoSchema = Schema({
+const todoSchema = mongoose.Schema({
     title: { required: true, type: String},
     completed: {required: true, type: Boolean},
 },
@@ -8,4 +8,4 @@ const todoSchema = Schema({
     timestamps: true
 })
 
-module.exports = model('Todo', todoSchema);
+module.exports = mongoose.model('Todo', todoSchema);
